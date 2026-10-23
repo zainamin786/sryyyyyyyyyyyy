@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sorrrryyyy, Ente Kunjuuu 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --pink-1: #fff0f5;
+    --pink-2: #ffd6e7;
+    --pink-3: #ff8fbf;
+    --rose: #e75480;
+    --gold: #d4af37;
+    --gold-light: #f4d97b;
+    --plum: #6b2d5b;
+    --text: #5a3d52;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255, 214, 231, 0.7), transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(244, 217, 123, 0.25), transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(255, 143, 191, 0.35), transparent 55%),
+      linear-gradient(160deg, var(--pink-1) 0%, #ffeaf4 50%, #fff8e7 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Sparkles ---------- */
+  .sparkle {
+    position: fixed;
+    top: -10px;
+    font-size: 14px;
+    color: var(--gold);
+    animation: fall linear infinite;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.9; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* ---------- Header / Crown ---------- */
+  header {
+    text-align: center;
+    padding: 70px 20px 30px;
+    position: relative;
+    z-index: 2;
+  }
+  .crown {
+    font-size: 64px;
+    display: inline-block;
+    animation: bounce 2.4s ease-in-out infinite;
+    filter: drop-shadow(0 6px 12px rgba(212, 175, 55, 0.45));
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-12px) rotate(3deg); }
+  }
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    color: var(--rose);
+    margin-top: 10px;
+    text-shadow: 0 2px 0 #fff, 0 6px 18px rgba(231, 84, 128, 0.35);
+  }
+  .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--plum);
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+
+  /* ---------- Letter card ---------- */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border: 2px solid var(--gold-light);
+    border-radius: 24px;
+    padding: clamp(28px, 5vw, 52px);
+    box-shadow:
+      0 20px 50px rgba(231, 84, 128, 0.18),
+      inset 0 0 0 6px rgba(255, 255, 255, 0.6);
+    position: relative;
+  }
+  .card::before, .card::after {
+    content: "👑";
+    position: absolute;
+    font-size: 26px;
+    top: -16px;
+    background: #fff;
+    padding: 0 8px;
+    border-radius: 50%;
+  }
+  .card::before { left: 28px; }
+  .card::after { right: 28px; }
+
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--plum);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .card p {
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
+    line-height: 1.9;
+    margin-bottom: 18px;
+  }
+  .card p em {
+    color: var(--rose);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: var(--rose);
+    text-align: right;
+    margin-top: 26px;
+  }
+
+  /* ---------- Reasons ---------- */
+  .reasons {
+    margin-top: 44px;
+    text-align: center;
+  }
+  .reasons h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    color: var(--plum);
+    margin-bottom: 24px;
+  }
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .reason {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px 18px;
+    border: 1.5px solid var(--pink-2);
+    box-shadow: 0 10px 24px rgba(255, 143, 191, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .reason:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 30px rgba(231, 84, 128, 0.28);
+  }
+  .reason .icon { font-size: 30px; display: block; margin-bottom: 8px; }
+  .reason p { font-size: 0.95rem; line-height: 1.6; }
+
+  /* ---------- Promise jar ---------- */
+  .promise {
+    margin-top: 44px;
+    text-align: center;
+  }
+  .promise-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, var(--rose), var(--pink-3));
+    border: none;
+    border-radius: 999px;
+    padding: 15px 36px;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(231, 84, 128, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .promise-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 30px rgba(231, 84, 128, 0.5); }
+  .promise-btn:active { transform: translateY(0); }
+
+  .promise-text {
+    margin-top: 22px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+    color: var(--plum);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .promise-text.show { opacity: 1; transform: translateY(0); }
+
+  /* ---------- Forgive button game ---------- */
+  .game {
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .game h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--plum);
+    margin-bottom: 6px;
+  }
+  .game p.hint { font-size: 0.9rem; color: #9a7b90; margin-bottom: 20px; }
+  .game-stage { position: relative; height: 140px; }
+  .forgive-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--plum);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    border: none;
+    border-radius: 999px;
+    padding: 14px 30px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(212, 175, 55, 0.4);
+    transition: left 0.25s ease, top 0.25s ease;
+    white-space: nowrap;
+  }
+  .caught .forgive-btn { position: static; transform: none; }
+  .caught-msg {
+    display: none;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    color: var(--rose);
+    margin-top: 14px;
+  }
+  .caught .caught-msg { display: block; animation: pop 0.5s ease; }
+  @keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    70% { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ---------- Final line ---------- */
+  .finale {
+    text-align: center;
+    margin: 56px auto 70px;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+  .finale p {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: var(--rose);
+    text-shadow: 0 4px 14px rgba(231, 84, 128, 0.3);
+  }
+  .hearts { font-size: 26px; letter-spacing: 8px; margin-top: 14px; }
+
+  footer {
+    text-align: center;
+    padding: 0 20px 40px;
+    font-size: 0.85rem;
+    color: #b08aa5;
+    position: relative;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="crown">👑</span>
+  <h1>Sorrrryyyy, my Kunjuuuu 💖</h1>
+  <p class="subtitle">A little corner of the kingdom, just for my ponneeeee 🌸</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>To my ente mutheeeee, 🥺</h2>
+    <p>
+      Heyyy kunjuuuu... I knowwww I really reallllly messed uppp. I am sooooo
+      sorrrryyyy — like, genuinelyyyy sorrrryyyy from the bottom of my heartttt.
+      You never deserved to cryyy because of me, not even a littleeeee bittt, and
+      it's killlling me that I was the one who made you feel that way. 😔
+    </p>
+    <p>
+      You're my princessss — my kochuuu, my kuttiieee, my everythingyyy. Your
+      smilewwwww is my favvvvourite thing in this whole universeeee, and I hate
+      that I was the reasonnnn it disappeareddd for a while. I never everrr want
+      to be the one who makes your crownnn slippp, mutheee. 👑
+    </p>
+    <p>
+      I can't go back in timeeee, but I really really really want to make itttt
+      up to youuuu. I'll listennn more, I'll thinkkk before I speak, and I'll
+      loveeeee you softer and longerrrr than everrrr. Pleaseeee give this silly
+      boy one more chancehh to make you smilewww againnn? 💖
+    </p>
+    <div class="signature">— Your sorrrryyyy boy, alwaysyyy</div>
+  </section>
+
+  <section class="reasons">
+    <h3>Why you'll always be my princessss 👸</h3>
+    <div class="reason-grid">
+      <div class="reason">
+        <span class="icon">🌹</span>
+        <p>Your hearttt is so pureee and kindddd, kuttiieee. The whole worlddddd feels softer becauseeee of youuuu.</p>
+      </div>
+      <div class="reason">
+        <span class="icon">✨</span>
+        <p>One smilewwww from youuu and all my problemsssss disappearrrr like magicccc 🪄</p>
+      </div>
+      <div class="reason">
+        <span class="icon">💖</span>
+        <p>You loveeeee so deeplyyy and so hardddd — I'm the luckiesttt boy aliveeee, ponneee.</p>
+      </div>
+      <div class="reason">
+        <span class="icon">🌙</span>
+        <p>Even when we fighttttt, you're still the lasttt thoughttt before I sleepeeee, kunjuuuu 🌛</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise">
+    <button class="promise-btn" id="promiseBtn">🎁 Open My Promise, mutheee</button>
+    <div class="promise-text" id="promiseText">
+      "I promisssse to hold your handdddd through everythingggg, to listennn before I speakkkk,
+      and to spend my timeeeee making my kunjuuuuu feel like the real queen she issss 💖"
+    </div>
+  </section>
+
+  <section class="game" id="gameStage">
+    <h3>One last thinggg, kochuuuuu... 🥺</h3>
+    <p class="hint">Catch the buttongg — it's as stubborn as I washh 😅</p>
+    <div class="game-stage">
+      <button class="forgive-btn" id="forgiveBtn">Forgiveeee me? 💍</button>
+      <div class="caught-msg">Yayyyyy! I knewwwwww you'd say yesss, my mutheeeeee! 👑💖</div>
+    </div>
+  </section>
+</main>
+
+<section class="finale">
+  <p>You are, and always will beeeee, my kunjuuuuu 💗</p>
+  <div class="hearts">💗 👑 💗</div>
+</section>
+
+<footer>Made with lotttsss of loveee, regrettt and hopeeee 💖</footer>
+
+<script>
+  // Falling sparkles
+  const sparkleChars = ["✨", "⭐", "💖", "👑", "🌸", "💫"];
+  function createSparkle() {
+    const el = document.createElement("div");
+    el.className = "sparkle";
+    el.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.animationDuration = 6 + Math.random() * 7 + "s";
+    el.style.fontSize = 12 + Math.random() * 16 + "px";
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 14000);
+  }
+  setInterval(createSparkle, 700);
+
+  // Promise reveal
+  const promiseBtn = document.getElementById("promiseBtn");
+  const promiseText = document.getElementById("promiseText");
+  promiseBtn.addEventListener("click", () => {
+    promiseText.classList.add("show");
+    promiseBtn.textContent = "💖 My Promise";
+    promiseBtn.disabled = true;
+    promiseBtn.style.opacity = "0.75";
+  });
+
+  // Playful "Forgive me?" button
+  const stage = document.getElementById("gameStage");
+  const forgiveBtn = document.getElementById("forgiveBtn");
+  let dodges = 0;
+  function dodge() {
+    if (stage.classList.contains("caught")) return;
+    dodges++;
+    const x = Math.random() * 60 + 10;
+    const y = Math.random() * 60 + 10;
+    forgiveBtn.style.left = x + "%";
+    forgiveBtn.style.top = y + "%";
+  }
+  forgiveBtn.addEventListener("mouseenter", dodge);
+  forgiveBtn.addEventListener("click", () => {
+    if (dodges < 3) {
+      dodge();
+      return;
+    }
+    stage.classList.add("caught");
+    // Celebration burst
+    for (let i = 0; i < 30; i++) setTimeout(createSparkle, i * 60);
+  });
+  forgiveBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    if (dodges < 3) {
+      dodge();
+    } else {
+      stage.classList.add("caught");
+      for (let i = 0; i < 30; i++) setTimeout(createSparkle, i * 60);
+    }
+  }, { passive: false });
+</script>
+</body>
+</html>
